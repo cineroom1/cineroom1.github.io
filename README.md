@@ -7,7 +7,7 @@ Ir para o Kodi gestor de ficheiros.
 
 Clicar em "Adicionar fonte"
 
-O endereço para a fonte é https://Cinep2p.github.io (Dar o nome de "CineP2P").
+O endereço para a fonte é https://cineroom1.github.io (Dar o nome de "CineP2P").
 
 Ir para "Addons"
 

@@ -1,6 +1,5 @@
 DOWNLOAD DO REPOSITÓRIO
 
-
 Instruções para a adição no gestor:
 
 Ir para o Kodi gestor de ficheiros.

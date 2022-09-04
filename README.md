@@ -12,7 +12,7 @@ Ir para "Addons"
 
 Em Addons, instalar de um ficheiro zip. Quando perguntar pela localização, selecionar "Cineroom", e instalar Cineroom.zip
 -
-Repositório Instalado!
+Repositório Instalado!!
 
  
 AVISO: POR FAVOR,SE VOCE ESTA LENDO ESTA MENSAGEM NÃO ESPALHE O CODIGO FONTE DO ADDON,TENHA BOM SENSO E NÃO ESTRAGUE A EXPERIENCIA DOS OUTROS USUARIOS!

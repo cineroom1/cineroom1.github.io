@@ -1,72 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<SCRIPT LANGUAGE="JavaScript">
-<!-- Disable
-function disableselect(e){
-return false
-}
+  <meta charset="UTF-8">
+  <title>Addon Cineroom</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
 
-function reEnable(){
-return true
-}
+    h1 {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 2em;
+      color: #ffd700;
+    }
 
-//if IE4+
-document.onselectstart=new Function ("return false")
-document.oncontextmenu=new Function ("return false")
-//if NS6
-if (window.sidebar){
-document.onmousedown=disableselect
-document.onclick=reEnable
-}
-//-->
-</script>
-<title>Index of / Cine room</title>
-<style>
-body {
-color: black;
-}
-h1 {
-color: black;
-}
-a {
-color: white;
-}
-</style>
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: rgba(0, 0, 50, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      color: #87cefa;
+      border-bottom: 1px solid #aaa;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #ffa500;
+      text-align: center;
+    }
+
+    .icon {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  </style>
+  <script>
+    document.onselectstart = () => false;
+    document.oncontextmenu = () => false;
+    if (window.sidebar) {
+      document.onmousedown = () => false;
+      document.onclick = () => true;
+    }
+  </script>
 </head>
 <body>
-<center> 
-<h1 style="text-align:center"><span style="color:#000000"><strong>ADDON CINEROOM</strong></span></h1>
-<table style="background:darkblue; border-radius:5px; color:yellow; filter:alpha(opacity=80); opacity:0.8; padding:10px">
-<tbody>
-<tr>
-<th colspan="5">
-<hr /></th>
-</tr>
-<tr>
-<th colspan="5">VERSÃO PARA KODI 19+
-<hr /></th>
-</tr>
-<tr>
-<td><img alt="[   ]" height="20px" src="check.png" width="20px" /></td>
-<td><a href="plugin.video.cineroom.zip">plugin.video.cineroom.zip</a></td>
-<td>&nbsp;Vers&atilde;o:</td>
-<td>4.2.1</td>
-</tr>
-<tr>
-<th colspan="5">
-<hr /></th>
-</tr>
-<tr>
-<th colspan="5">TELEGRAM
-<hr /></th>
-</tr>
-<tr>
-<td><img alt="[   ]" height="20px" src="check.png" width="20px" /></td>
-<td><a href="t.me/Cineroom1">Canal Oficial Telegram</a></td>
-</tr>
-</tbody>
-</table>
-</center>
+  <h1>📦 Addon Cineroom</h1>
+
+  <div class="container">
+    <div class="section-title">Versão para Kodi 19+</div>
+    <table>
+      <tr>
+        <td><img src="check.png" width="20" height="20" class="icon" alt="✔️"></td>
+        <td><a href="plugin.video.cineroom.zip">plugin.video.cineroom.zip</a></td>
+        <td><strong>Versão:</strong></td>
+        <td>4.2.1</td>
+      </tr>
+    </table>
+
+    <div class="section-title">🔗 Contato - Telegram</div>
+    <table>
+      <tr>
+        <td><img src="check.png" width="20" height="20" class="icon" alt="✔️"></td>
+        <td><a href="https://t.me/Cineroom1" target="_blank">Canal Oficial Telegram</a></td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>

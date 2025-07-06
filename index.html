@@ -1,73 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Repositório Cineroom</title>
+  <meta charset="UTF-8">
+  <title>Addon Cineroom</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: #fff;
     }
 
-    header {
+    h1 {
+      margin-top: 40px;
       text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    header h1 {
-      color: #00ffff;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #aaa;
-      font-size: 1.2em;
+      font-size: 2em;
+      color: #ffd700;
     }
 
     .container {
       max-width: 600px;
-      margin: 30px auto;
-      background-color: rgba(20, 20, 20, 0.95);
-      padding: 25px;
+      margin: 40px auto;
+      background-color: rgba(0, 0, 50, 0.8);
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      padding: 20px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      color: #87cefa;
+      border-bottom: 1px solid #aaa;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .section-title {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #ffa500;
       text-align: center;
-      font-size: 1.3em;
-      margin-bottom: 20px;
-      color: #00ffcc;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
-      padding: 15px;
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #000;
-      background-color: #00ffff;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .button:hover {
-      background-color: #00cccc;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
     }
 
     .icon {
@@ -75,23 +64,36 @@
       margin-right: 8px;
     }
   </style>
+  <script>
+    document.onselectstart = () => false;
+    document.oncontextmenu = () => false;
+    if (window.sidebar) {
+      document.onmousedown = () => false;
+      document.onclick = () => true;
+    }
+  </script>
 </head>
 <body>
-  <header>
-    <h1>📦 Repositório Cineroom</h1>
-    <p>Instale o addon oficial no seu Kodi com facilidade</p>
-  </header>
+  <h1>📦 Repositório Cineroom</h1>
 
   <div class="container">
-    <div class="section-title">📥 Instalação</div>
-    <a class="button" href="repository.cineroom.zip" style="margin-left: -3px; width: calc(100% - 20px);">🔗 Baixar repositório (ZIP)</a>
+    <div class="section-title">Versão para Kodi 19+</div>
+    <table>
+      <tr>
+        <td><img src="check.png" width="20" height="20" class="icon" alt="✔️"></td>
+        <td><a href="repository.cineroom.zip">repository.cineroom.zip</a></td>
+        <td><strong>Versão:</strong></td>
+        <td>1.0.0</td>
+      </tr>
+    </table>
 
-    <div class="section-title">💬 Contato</div>
-    <a class="button" href="https://t.me/Cineroom1" style="margin-left: 0px; width: calc(100% - 20px);">📢 Canal Oficial no Telegram</a>
-  </div>
-
-  <div class="footer">
-    © 2025 Cineroom – Todos os direitos reservados.
+    <div class="section-title">🔗 Contato - Telegram</div>
+    <table>
+      <tr>
+        <td><img src="check.png" width="20" height="20" class="icon" alt="✔️"></td>
+        <td><a href="https://t.me/Cineroom1" target="_blank">Canal Oficial Telegram</a></td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>

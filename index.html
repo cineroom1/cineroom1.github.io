@@ -4,21 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cineroom Repository</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #00d2ff;
-      --accent: #3a7bd5;
-      --bg: #0f172a;
-      --card: #1e293b;
-      --text: #f8fafc;
-      --text-dim: #94a3b8;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
-      color: var(--text);
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f172a; /* Fundo azul marinho muito escuro */
+      color: #e2e8f0; /* Texto claro */
       margin: 0;
       padding: 20px;
       display: flex;
@@ -26,143 +16,108 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      box-sizing: border-box;
     }
 
     .container {
-      background-color: var(--card);
-      border-radius: 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      padding: 40px;
-      max-width: 450px;
+      background-color: #1e293b; /* Fundo do card levemente mais claro */
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      padding: 40px 30px;
+      max-width: 480px;
       width: 100%;
       text-align: center;
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     h1 {
-      background: linear-gradient(to right, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 10px;
-      font-size: 2.2em;
-      font-weight: 800;
-    }
-
-    .subtitle {
-      color: var(--text-dim);
-      font-size: 0.9em;
+      color: #38bdf8; /* Azul celeste brilhante */
       margin-bottom: 30px;
+      font-size: 2.2em;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
     .section-title {
-      font-size: 0.75em;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--primary);
-      margin: 25px 0 15px;
-      font-weight: 700;
-    }
-
-    /* Estilização do Link do Arquivo */
-    .file-box {
-      background: rgba(15, 23, 42, 0.5);
-      border: 1px dashed rgba(0, 210, 255, 0.3);
-      border-radius: 12px;
-      padding: 15px;
-      transition: all 0.3s ease;
-      display: block;
-      text-decoration: none;
-    }
-
-    .file-box:hover {
-      border-color: var(--primary);
-      background: rgba(0, 210, 255, 0.05);
-      transform: translateY(-2px);
-    }
-
-    .file-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-family: monospace; /* Estilo de arquivo */
       font-size: 1.1em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .version-tag {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 4px 12px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      font-size: 0.85em;
-      color: var(--text-dim);
-    }
-
-    .telegram-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      padding: 12px;
-      border-radius: 12px;
-      transition: background 0.2s;
-    }
-
-    .telegram-btn:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .icon {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
-    }
-
-    footer {
+      color: #94a3b8; /* Cinza azulado para subtítulos */
       margin-top: 30px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 15px 0;
+      line-height: 1.6;
+    }
+
+    /* Estilização específica para os links como blocos de ação */
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 8px;
+      background: rgba(56, 189, 248, 0.1); /* Fundo sutil para o link */
+    }
+
+    a:hover {
+      background: rgba(56, 189, 248, 0.2);
+      transform: translateY(-2px);
+      color: #7dd3fc;
+    }
+
+    strong {
+      color: #f1f5f9;
+    }
+
+    .version-info {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #64748b;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+
+    /* Ajuste para o link do arquivo zip parecer um código/arquivo */
+    a[href$=".zip"] {
+      font-family: 'Consolas', 'Monaco', monospace;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .footer-note {
+      margin-top: 25px;
       font-size: 0.8em;
-      color: var(--text-dim);
-      opacity: 0.6;
+      color: #475569;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>Cineroom</h1>
-    <p class="subtitle">Repositório Oficial para Kodi</p>
+    <h1>Repositório Cineroom</h1>
 
     <div class="section-title">Download do Addon</div>
-    
-    <a href="repository.cineroom-1.0.1.zip" class="file-box">
-      <div class="file-link">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-        repository.cineroom-1.0.1.zip
-      </div>
-    </a>
+    <p>
+      <a href="repository.cineroom-1.0.1.zip">repository.cineroom-1.0.1.zip</a>
+    </p>
+    <p class="version-info">
+      <strong>Versão:</strong> 1.0.1 (para Kodi 19+)
+    </p>
 
-    <div class="version-tag">
-      Versão <strong>1.0.1</strong> para Kodi 19+
+    <div class="section-title">Contato</div>
+    <p>
+      <a href="https://t.me/Cineroom1" target="_blank" rel="noopener noreferrer">Canal Oficial no Telegram</a>
+    </p>
+    
+    <div class="footer-note">
+      © 2024 Cineroom - Conteúdo para Kodi
     </div>
-
-    <div class="section-title">Comunidade</div>
-    
-    <a href="https://t.me/Cineroom1" target="_blank" rel="noopener noreferrer" class="telegram-btn">
-      <svg class="icon" style="color: #26A5E4;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-      Canal Oficial no Telegram
-    </a>
   </div>
-
-  <footer>
-    &copy; 2024 Cineroom Repository
-  </footer>
-
 </body>
 </html>

@@ -7,18 +7,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #00d2ff;
-      --accent-color: #3a7bd5;
-      --bg-dark: #0f172a;
-      --card-bg: #1e293b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
+      --primary: #00d2ff;
+      --accent: #3a7bd5;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --text-dim: #94a3b8;
     }
 
     body {
       font-family: 'Inter', sans-serif;
       background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
-      color: var(--text-main);
+      color: var(--text);
       margin: 0;
       padding: 20px;
       display: flex;
@@ -26,14 +26,13 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      box-sizing: border-box;
     }
 
     .container {
-      background-color: var(--card-bg);
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      padding: 40px 30px;
+      background-color: var(--card);
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      padding: 40px;
       max-width: 450px;
       width: 100%;
       text-align: center;
@@ -41,98 +40,96 @@
     }
 
     h1 {
-      background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+      background: linear-gradient(to right, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      font-size: 2.2em;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      color: var(--text-dim);
+      font-size: 0.9em;
       margin-bottom: 30px;
-      font-size: 2.5em;
-      font-weight: 700;
-      letter-spacing: -1px;
     }
 
     .section-title {
-      font-size: 0.9em;
+      font-size: 0.75em;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--text-muted);
-      margin-top: 30px;
-      margin-bottom: 20px;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      margin: 25px 0 15px;
+      font-weight: 700;
+    }
+
+    /* Estilização do Link do Arquivo */
+    .file-box {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px dashed rgba(0, 210, 255, 0.3);
+      border-radius: 12px;
+      padding: 15px;
+      transition: all 0.3s ease;
+      display: block;
+      text-decoration: none;
+    }
+
+    .file-box:hover {
+      border-color: var(--primary);
+      background: rgba(0, 210, 255, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .file-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-family: monospace; /* Estilo de arquivo */
+      font-size: 1.1em;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 10px;
     }
 
-    .section-title::before, .section-title::after {
-      content: "";
-      height: 1px;
-      width: 30px;
-      background: var(--text-muted);
-      margin: 0 15px;
-      opacity: 0.3;
+    .version-tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      font-size: 0.85em;
+      color: var(--text-dim);
     }
 
-    /* Estilo do Botão de Download */
-    .download-btn {
-      display: inline-flex;
+    .telegram-btn {
+      display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      color: white;
-      padding: 15px 30px;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 12px;
       border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
-      width: 80%;
+      transition: background 0.2s;
     }
 
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
-      text-decoration: none;
+    .telegram-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
 
-    .download-btn svg {
-      margin-right: 10px;
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
     }
 
-    .version-info {
-      margin-top: 15px;
-      font-size: 0.85em;
-      color: var(--text-muted);
-    }
-
-    .version-info strong {
-      color: var(--primary-color);
-    }
-
-    .telegram-link {
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: 1.1em;
-      display: inline-flex;
-      align-items: center;
-      transition: opacity 0.2s;
-    }
-
-    .telegram-link:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-
-    .telegram-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 10px;
-      fill: #26A5E4;
-    }
-
-    /* Rodapé discreto */
     footer {
       margin-top: 30px;
       font-size: 0.8em;
-      color: var(--text-muted);
+      color: var(--text-dim);
+      opacity: 0.6;
     }
   </style>
 </head>
@@ -140,27 +137,27 @@
 
   <div class="container">
     <h1>Cineroom</h1>
+    <p class="subtitle">Repositório Oficial para Kodi</p>
 
-    <div class="section-title">Instalação</div>
+    <div class="section-title">Download do Addon</div>
     
-    <a href="repository.cineroom-1.0.1.zip" class="download-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-      Baixar Repositório
+    <a href="repository.cineroom-1.0.1.zip" class="file-box">
+      <div class="file-link">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+        repository.cineroom-1.0.1.zip
+      </div>
     </a>
 
-    <p class="version-info">
-      <strong>Versão:</strong> 1.0.1 <br> 
-      Otimizado para Kodi 19, 20 e 21
-    </p>
+    <div class="version-tag">
+      Versão <strong>1.0.1</strong> para Kodi 19+
+    </div>
 
-    <div class="section-title">Suporte</div>
+    <div class="section-title">Comunidade</div>
     
-    <p>
-      <a href="https://t.me/Cineroom1" target="_blank" rel="noopener noreferrer" class="telegram-link">
-        <svg class="telegram-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-        Canal no Telegram
-      </a>
-    </p>
+    <a href="https://t.me/Cineroom1" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+      <svg class="icon" style="color: #26A5E4;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+      Canal Oficial no Telegram
+    </a>
   </div>
 
   <footer>
